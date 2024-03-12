@@ -2,7 +2,7 @@ import React from "react";
 
 import { LuGraduationCap } from "react-icons/lu";
 
-import corpcommentImg from "@/public/corpcomment.png";
+import memoryGameImg from "@/public/memory-game.png"
 
 export const links = [
   {
@@ -44,11 +44,11 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Memory Game",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "This is my first game I made with javascript, players can either choose number or icon mode for the game, and 4x4 and 6x6 board, players can start single-player mode, or play up to 4 players.",
+    tags: ["React", "Typescript", "Tailwind"],
+    imageUrl: memoryGameImg,
   },
 ] as const;
 
