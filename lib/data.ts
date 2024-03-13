@@ -3,6 +3,7 @@ import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 
 import memoryGameImg from "@/public/memory-game.png"
+import parkingAppImg from "@/public/parking-app-api.png"
 
 export const links = [
   {
@@ -50,6 +51,12 @@ export const projectsData = [
     tags: ["React", "Typescript", "Tailwind"],
     imageUrl: memoryGameImg,
   },
+  {
+    title: "Parking App Api",
+    description: "Parking App Api let's you to register on parking application and add your vehicle, make parking reservations and connect your vehicles with parking lots",
+    tags: ["Node.Js", "Express.Js", "Typescript", "Swagger"],
+    imageUrl: parkingAppImg,
+  }
 ] as const;
 
 export const skillsData = [
