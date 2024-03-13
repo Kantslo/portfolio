@@ -1,8 +1,15 @@
-import React from 'react'
+"use client"
+
+import { motion } from "framer-motion"
+import SectionHeading from './section-heading'
 
 export default function About() {
-  return <section>
-    <h2>About me</h2>
+  return <motion.section className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40'
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.175 }}
+  >
+    <SectionHeading>About me</SectionHeading>
     <p className="mb-3">
         After enrolling in university,{" "}
         I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned{" "}
@@ -24,5 +31,5 @@ export default function About() {
         <span className="italic">When I'm not coding</span>, I enjoy playing
         video games, watching movies, and playing with my dog.
       </p>
-  </section>
+  </motion.section>
 }
