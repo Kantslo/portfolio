@@ -61,12 +61,13 @@ export const skillsData = [
   "Next.js",
   "Node.js",
   "Tailwind",
-  "MongoDB",
   "Express",
+  "Swagger",
+  "RESTful API",
+  "MongoDB",
   "MySQL",
   "PostgreSQL",
   "Sequelize",
   "Styled Components",
-  "RESTful API",
-  "Swagger",
+  "Framer Motion"
 ] as const;
