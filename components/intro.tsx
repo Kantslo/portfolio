@@ -1,29 +1,18 @@
 "use client"
 
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { useInView } from "react-intersection-observer";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
 
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 import myImg from "@/public/me.jpg"
 
 export default function Intro() {
-  const {ref, inView} = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView  && Date.now() - timeOfLastClick > 0) {
-      setActiveSection("Home")
-    }
-  }, [inView, setActiveSection, timeOfLastClick])
+  const { ref } = useSectionInView("Home", 0.5)
 
   return <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
     <div className="flex items-center justify-center">
