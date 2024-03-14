@@ -1,11 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
+import toast from "react-hot-toast";
 
-import SubmitBtn from "./submit-btn";
 import SectionHeading from "./section-heading";
 import { sendEmail } from "@/actions/sendEmail";
 import { useSectionInView } from "@/lib/hooks";
+import SubmitBtn from "./submit-btn";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact")
@@ -24,11 +25,11 @@ export default function Contact() {
       const {data, error} = await sendEmail(formData)
 
       if (error) {
-        alert(error);
+        toast.error(error);
         return;
       }
 
-      alert("Email sent successfully!")
+      toast.success("Email sent successfully!");
     }} 
     className="mt-10 flex flex-col">
       <input className="h-14 rounded-lg borderBlack px-4" type="email" required maxLength={500} placeholder="Your email" name="senderEmail" />
